@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: reward-dining
+  name: reward-dining-667df6c98f-kcp4x
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: reward-dining
+  template:
+    metadata:
+      labels:
+        app: reward-dining
+    spec:
+      serviceAccountRef:
+        name: default
+        namespace: default
+      containers:
+      - image: ghcr.io/yuki24/reward-dining@sha256:7730f90f23e95b2c67230b13ec20101653afd718ff08f21f7b09d3ed14e5be07
+        name: reward-dining-667df6c98f-kcp4x
