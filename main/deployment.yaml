@@ -5,7 +5,7 @@ metadata:
     app: reward-dining
   name: reward-dining
 spec:
-  replicas: 2
+  replicas: 10
   revisionHistoryLimit: 1
   selector:
     matchLabels:
